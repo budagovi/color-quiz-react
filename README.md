@@ -1,1 +1,1 @@
-Visti --> https://budagovi.github.io/color-quiz-react/
+Visit --> https://budagovi.github.io/color-quiz-react/
