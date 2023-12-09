@@ -5,6 +5,7 @@
   border: 0;
   background-color: rgb(251, 209, 175);
   cursor: pointer;
+  transition: .2s ease-in-out;
 }
 
 .btn:hover {
@@ -12,6 +13,6 @@
 }
 
 .btn:disabled {
-  background-color: #747475;
+  background-color: #ababab;
   color: #fff;
 }

@@ -1,29 +1,27 @@
 import style from "./App.module.css";
 
-import { useContext } from "react";
-import { gameContext} from './store/gameState';
-
+import context from "./store/gameCtx";
 //components
 import Header from './components/Header';
 
 //UI
 import Button from "./UI/Button";
+import Board from "./components/quiz board/Board";
+import { useContext } from "react";
 
 const App = () => {
 
-  const gameCtx = useContext(gameContext);
-  const {isStarted} = gameContext;
+  const gameCtx = useContext(context);
 
   const startGameHandler = () => {
-    console.log('test');
-    gameCtx.checkAnswer();
+    gameCtx.startGame();
   }
 
   return (
     <div className={style.wrapper}>
       <Header />
-      <main>
-        {!gameCtx.isStarted && <Button onClick={startGameHandler}>Start Quiz</Button>}
+      <main style={{ flexGrow: !gameCtx.isStarted ? 0.5 : 1 }}>
+        {!gameCtx.isStarted ? <Button onClick={startGameHandler}>Start Quiz</Button> : <Board />}
       </main>
     </div>
   );
