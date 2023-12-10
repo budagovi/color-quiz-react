@@ -3,13 +3,6 @@ import context from "./gameCtx"
 
 const gameReducer = (prevState, action) => {
 
-  if (action.type === 'START') {
-    return {
-      ...prevState,
-      isStarted: true
-    }
-  }
-
   if (action.type === 'FETCH-COLORS') {
     return {
       ...prevState,
@@ -20,7 +13,7 @@ const gameReducer = (prevState, action) => {
   if (action.type === 'ADD-SCORE') {
     return {
       ...prevState,
-      score: prevState.score + 20
+      score: prevState.score + 1
     }
   }
 
@@ -28,13 +21,18 @@ const gameReducer = (prevState, action) => {
     if (prevState.step < 10) {
       return {
         ...prevState,
-        step: prevState.step++
+        step: prevState.step + 1
       }
     } else {
-      return {
-        ...prevState,
-        step: 0
-      }
+      return { ...prevState }
+    }
+  }
+
+  if(action.type === 'RESET') {
+    return {
+      ...prevState,
+      step: -1,
+      score: 0
     }
   }
 
@@ -55,9 +53,8 @@ const ContextProvider = ({ children }) => {
 
   const initalState = {
     colors: [],
-    isStarted: false,
-    step: 0,
-    score: 0
+    step: -1,
+    score: 0,
   }
 
   const [gameState, gameDispatch] = useReducer(gameReducer, initalState);
@@ -68,9 +65,9 @@ const ContextProvider = ({ children }) => {
     step: gameState.step,
     score: gameState.score,
     //triggers
-    startGame: () => { gameDispatch({ type: 'START' }) },
     addScore: () => { gameDispatch({ type: 'ADD-SCORE' }) },
-    next: () => { gameDispatch({ type: 'NEXT-COLOR' }) }
+    next: () => { gameDispatch({ type: 'NEXT-COLOR' }) },
+    reset: () => {gameDispatch({type: 'RESET'})}
   }
 
   return (

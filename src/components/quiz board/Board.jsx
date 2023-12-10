@@ -44,7 +44,9 @@ const Board = () => {
       <Button 
         isDisabled={!selected}
         onClick={nextColor}
-      >Next</Button>
+      >
+        Continue
+      </Button>
     </>
   )
 }

@@ -3,12 +3,11 @@ import React from "react";
 //create context (frame)
 const context = React.createContext({
   colors: [],
-  isStarted: false,
-  step: 0,
+  step: -1,
   score: 0,
-  startGame: () => {},
   addScore: () => {},
-  next: () => {}
+  next: () => {},
+  reset: () => {}
 });
 
 export default context;
