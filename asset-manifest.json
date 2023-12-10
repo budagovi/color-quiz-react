@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/color-quiz-react/static/css/main.94b51921.css",
-    "main.js": "/color-quiz-react/static/js/main.b6bb9283.js",
+    "main.css": "/color-quiz-react/static/css/main.e16ac933.css",
+    "main.js": "/color-quiz-react/static/js/main.81793ae3.js",
     "index.html": "/color-quiz-react/index.html",
-    "main.94b51921.css.map": "/color-quiz-react/static/css/main.94b51921.css.map",
-    "main.b6bb9283.js.map": "/color-quiz-react/static/js/main.b6bb9283.js.map"
+    "main.e16ac933.css.map": "/color-quiz-react/static/css/main.e16ac933.css.map",
+    "main.81793ae3.js.map": "/color-quiz-react/static/js/main.81793ae3.js.map"
   },
   "entrypoints": [
-    "static/css/main.94b51921.css",
-    "static/js/main.b6bb9283.js"
+    "static/css/main.e16ac933.css",
+    "static/js/main.81793ae3.js"
   ]
 }
