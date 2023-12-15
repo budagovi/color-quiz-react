@@ -7,7 +7,7 @@ import Button from '../../UI/Button';
 const Board = () => {
 
   const gameCtx = useContext(context);
-  const { color, answers } = gameCtx.colors[gameCtx.step];
+  const { answers, color } = gameCtx.colors[gameCtx.step];
 
   const [selected, setSelected] = useState('');
 
@@ -15,7 +15,7 @@ const Board = () => {
   const checkAnswer = (option) => {
     setSelected(option);
 
-    if(option === color) {
+    if (option === color) {
       gameCtx.addScore();
     }
   }
@@ -29,7 +29,7 @@ const Board = () => {
     <>
       <div
         className={style.banner}
-        style={{ "backgroundColor": `${color}` }}
+        style={{ "backgroundColor": `${color+"AA"}` }}
       />
       <div className={style.options}>
         {answers.map((c, i = 0) =>
@@ -41,7 +41,7 @@ const Board = () => {
             answer={selected && color}
           />)}
       </div>
-      <Button 
+      <Button
         isDisabled={!selected}
         onClick={nextColor}
       >

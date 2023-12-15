@@ -18,6 +18,10 @@
   background-color: #f4f3f6ba;
 }
 
+.wrapper:disabled {
+  cursor: default;
+}
+
 .wrapper span:nth-of-type(1) {
   position: absolute;
   left: 1rem;

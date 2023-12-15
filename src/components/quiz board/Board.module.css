@@ -3,3 +3,7 @@
   width: 320px;
   height: 150px;
 }
+
+@media (max-height: 620px) {
+  
+}

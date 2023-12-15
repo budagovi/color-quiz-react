@@ -1,8 +1,9 @@
 .wrapper {
-  width: 100%;
+  width: min(100%, 1300px);
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .wrapper main {
@@ -10,4 +11,55 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.loadingWrap {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingWrap span {
+  transform: translateY(-1.4rem);
+}
+
+.loadingWrap span:nth-of-type(2) {
+  animation: show1 1s infinite;
+}
+
+@keyframes show1 {
+  0%, 25%{
+    color: transparent;
+  }
+  26%, 100% {
+    color: inherit;
+  }
+}
+
+.loadingWrap span:nth-of-type(3) {
+  animation: show2 1s infinite;
+}
+
+@keyframes show2 {
+  0%, 50%{
+    color: transparent;
+  }
+  51%, 100% {
+    color: inherit;
+  }
+}
+
+.loadingWrap span:nth-of-type(4) {
+  animation: show3 1s infinite;
+}
+
+@keyframes show3 {
+  0%, 75%{
+    color: transparent;
+  }
+  76%, 100% {
+    color: inherit;
+  }
 }

@@ -8,15 +8,33 @@
   position: relative;
 }
 
-.wrapper span:not(:nth-child(1)) {
+.wrapper > span:not(:nth-child(1)) {
   background-color: #F4F3F6;
   padding: 0.6rem 1.5rem;
   border-radius: 7px;
   font-size: 20px;
 }
 
-.wrapper span:nth-of-type(1) {
+.wrapper > span:nth-of-type(1) {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.score {
+  display: inline-block;
+  color: green;
+  animation: scale .4s ;
+}
+
+@keyframes scale {
+  0% {
+    scale: 1;
+  }
+  75% {
+    scale: 1.5;
+  }
+  100% {
+    scale: 1.3;
+  }
 }

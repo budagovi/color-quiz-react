@@ -42,10 +42,9 @@ const gameReducer = (prevState, action) => {
 const ContextProvider = ({ children }) => {
   //fetchin data
   useEffect(() => {
-    fetch("https://random-colors-lovat.vercel.app")
+      fetch("https://random-colors-lovat.vercel.app")
       .then(data => data.json())
       .then(colors => { gameDispatch({ type: 'FETCH-COLORS', data: colors }) });
-
   }, []);
 
 
